@@ -1,5 +1,5 @@
 import 'package:fbs_flutter/fitness_app/ui_view/wave_view.dart';
-import 'package:fbs_flutter/fitness_app/fitness_app_theme.dart';
+import 'package:fbs_flutter/palette.dart';
 import 'package:fbs_flutter/main.dart';
 import 'package:flutter/material.dart';
 

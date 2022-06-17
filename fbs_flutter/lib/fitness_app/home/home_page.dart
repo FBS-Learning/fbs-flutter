@@ -3,9 +3,8 @@ import 'package:fbs_flutter/fitness_app/ui_view/area_list_view.dart';
 import 'package:fbs_flutter/fitness_app/ui_view/running_view.dart';
 import 'package:fbs_flutter/fitness_app/ui_view/title_view.dart';
 import 'package:fbs_flutter/fitness_app/ui_view/workout_view.dart';
+import 'package:fbs_flutter/palette.dart';
 import 'package:flutter/material.dart';
-
-import '../fitness_app_theme.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key, this.animationController}) : super(key: key);

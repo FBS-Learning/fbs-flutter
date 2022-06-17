@@ -2,9 +2,8 @@ import 'package:fbs_flutter/fitness_app/ui_view/area_list_view.dart';
 import 'package:fbs_flutter/fitness_app/ui_view/running_view.dart';
 import 'package:fbs_flutter/fitness_app/ui_view/title_view.dart';
 import 'package:fbs_flutter/fitness_app/ui_view/workout_view.dart';
+import 'package:fbs_flutter/palette.dart';
 import 'package:flutter/material.dart';
-
-import '../fitness_app_theme.dart';
 
 class TrainingScreen extends StatefulWidget {
   const TrainingScreen({Key? key, this.animationController}) : super(key: key);
@@ -240,9 +239,9 @@ class _TrainingScreenState extends State<TrainingScreen>
                                 right: 8,
                               ),
                               child: Row(
-                                children: <Widget>[
+                                children: const <Widget>[
                                   Padding(
-                                    padding: const EdgeInsets.only(right: 8),
+                                    padding: EdgeInsets.only(right: 8),
                                     child: Icon(
                                       Icons.calendar_today,
                                       color: Palette.grey,

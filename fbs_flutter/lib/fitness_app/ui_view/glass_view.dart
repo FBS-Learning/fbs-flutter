@@ -1,7 +1,6 @@
 import 'package:fbs_flutter/main.dart';
+import 'package:fbs_flutter/palette.dart';
 import 'package:flutter/material.dart';
-
-import '../fitness_app_theme.dart';
 
 class GlassView extends StatelessWidget {
   final AnimationController? animationController;

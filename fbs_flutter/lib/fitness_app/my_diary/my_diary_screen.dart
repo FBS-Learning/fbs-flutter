@@ -2,7 +2,7 @@ import 'package:fbs_flutter/fitness_app/ui_view/body_measurement.dart';
 import 'package:fbs_flutter/fitness_app/ui_view/glass_view.dart';
 import 'package:fbs_flutter/fitness_app/ui_view/mediterranean_diet_view.dart';
 import 'package:fbs_flutter/fitness_app/ui_view/title_view.dart';
-import 'package:fbs_flutter/fitness_app/fitness_app_theme.dart';
+import 'package:fbs_flutter/palette.dart';
 import 'package:fbs_flutter/fitness_app/my_diary/meals_list_view.dart';
 import 'package:fbs_flutter/fitness_app/my_diary/water_view.dart';
 import 'package:flutter/material.dart';
