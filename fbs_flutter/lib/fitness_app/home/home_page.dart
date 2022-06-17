@@ -1,4 +1,4 @@
-import 'package:fbs_flutter/fitness_app/exercise/widgets/exercise_widget.dart';
+import 'package:fbs_flutter/fitness_app/home/widgets/home_widget.dart';
 import 'package:fbs_flutter/fitness_app/ui_view/area_list_view.dart';
 import 'package:fbs_flutter/fitness_app/ui_view/running_view.dart';
 import 'package:fbs_flutter/fitness_app/ui_view/title_view.dart';
@@ -7,16 +7,15 @@ import 'package:flutter/material.dart';
 
 import '../fitness_app_theme.dart';
 
-class ExerciseScreen extends StatefulWidget {
-  const ExerciseScreen({Key? key, this.animationController}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key, this.animationController}) : super(key: key);
 
   final AnimationController? animationController;
   @override
-  _ExerciseScreenState createState() => _ExerciseScreenState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _ExerciseScreenState extends State<ExerciseScreen>
-    with TickerProviderStateMixin {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   Animation<double>? topBarAnimation;
 
   List<Widget> listViews = <Widget>[];
@@ -61,7 +60,7 @@ class _ExerciseScreenState extends State<ExerciseScreen>
 
     listViews.add(
       TitleView(
-        titleTxt: 'Exercise',
+        titleTxt: 'Home',
         subTxt: 'Details',
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
             parent: widget.animationController!,
@@ -72,7 +71,7 @@ class _ExerciseScreenState extends State<ExerciseScreen>
     );
 
     listViews.add(
-      ExerciseWidget(
+      HomeWidget(
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
             parent: widget.animationController!,
             curve:
@@ -176,7 +175,7 @@ class _ExerciseScreenState extends State<ExerciseScreen>
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  'Exercise',
+                                  'Home',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontFamily: FitnessAppTheme.fontName,

@@ -2,11 +2,11 @@ import 'package:fbs_flutter/main.dart';
 import 'package:flutter/material.dart';
 import '../../fitness_app_theme.dart';
 
-class ExerciseWidget extends StatelessWidget {
+class HomeWidget extends StatelessWidget {
   final AnimationController? animationController;
   final Animation<double>? animation;
 
-  const ExerciseWidget({Key? key, this.animationController, this.animation})
+  const HomeWidget({Key? key, this.animationController, this.animation})
       : super(key: key);
 
   @override

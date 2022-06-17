@@ -1,4 +1,5 @@
-import 'package:fbs_flutter/fitness_app/exercise/exercise_screen.dart';
+import 'package:fbs_flutter/fitness_app/exercise/exercise_page.dart';
+import 'package:fbs_flutter/fitness_app/home/home_page.dart';
 import 'package:fbs_flutter/fitness_app/models/tabIcon_data.dart';
 import 'package:fbs_flutter/fitness_app/training/training_screen.dart';
 import 'package:flutter/material.dart';
@@ -80,14 +81,13 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
           tabIconsList: tabIconsList,
           addClick: () {},
           changeIndex: (int index) {
-            if (index == 0 || index == 2) {
+            if (index == 0) {
               animationController?.reverse().then<dynamic>((data) {
                 if (!mounted) {
                   return;
                 }
                 setState(() {
-                  tabBody =
-                      MyDiaryScreen(animationController: animationController);
+                  tabBody = HomePage(animationController: animationController);
                 });
               });
             } else if (index == 1) {
@@ -100,6 +100,17 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
                       TrainingScreen(animationController: animationController);
                 });
               });
+            }
+            else if (index == 2) {
+              animationController?.reverse().then<dynamic>((data) {
+                if (!mounted) {
+                  return;
+                }
+                setState(() {
+                  tabBody =
+                      MyDiaryScreen(animationController: animationController);
+                });
+              });
             } else if (index == 3) {
               animationController?.reverse().then<dynamic>((data) {
                 if (!mounted) {
@@ -107,7 +118,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
                 }
                 setState(() {
                   tabBody =
-                      ExerciseScreen(animationController: animationController);
+                      ExercisePage(animationController: animationController);
                 });
               });
             }
