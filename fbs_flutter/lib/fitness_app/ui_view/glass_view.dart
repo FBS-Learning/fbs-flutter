@@ -39,7 +39,7 @@ class GlassView extends StatelessWidget {
                                 topRight: Radius.circular(8.0)),
                             // boxShadow: <BoxShadow>[
                             //   BoxShadow(
-                            //       color: FitnessAppTheme.grey.withOpacity(0.2),
+                            //       color: Palette.grey.withOpacity(0.2),
                             //       offset: Offset(1.1, 1.1),
                             //       blurRadius: 10.0),
                             // ],
@@ -53,12 +53,12 @@ class GlassView extends StatelessWidget {
                                   'Prepare your stomach for lunch with one or two glass of water',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
-                                    fontFamily: FitnessAppTheme.fontName,
+                                    fontFamily: Palette.fontName,
                                     fontWeight: FontWeight.w500,
                                     fontSize: 14,
                                     letterSpacing: 0.0,
-                                    color: FitnessAppTheme.nearlyDarkBlue
-                                        .withOpacity(0.6),
+                                    color:
+                                        Palette.nearlyDarkBlue.withOpacity(0.6),
                                   ),
                                 ),
                               ),

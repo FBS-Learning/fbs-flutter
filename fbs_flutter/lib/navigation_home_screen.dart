@@ -1,4 +1,4 @@
-import 'package:fbs_flutter/app_theme.dart';
+import 'package:fbs_flutter/palette.dart';
 import 'package:fbs_flutter/custom_drawer/drawer_user_controller.dart';
 import 'package:fbs_flutter/custom_drawer/home_drawer.dart';
 import 'package:fbs_flutter/feedback_screen.dart';
@@ -26,12 +26,12 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppTheme.nearlyWhite,
+      color: Palette.nearlyWhite,
       child: SafeArea(
         top: false,
         bottom: false,
         child: Scaffold(
-          backgroundColor: AppTheme.nearlyWhite,
+          backgroundColor: Palette.nearlyWhite,
           body: DrawerUserController(
             screenIndex: drawerIndex,
             drawerWidth: MediaQuery.of(context).size.width * 0.75,

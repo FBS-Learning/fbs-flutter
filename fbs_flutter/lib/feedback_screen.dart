@@ -1,4 +1,4 @@
-import 'package:fbs_flutter/app_theme.dart';
+import 'package:fbs_flutter/palette.dart';
 import 'package:flutter/material.dart';
 
 class FeedbackScreen extends StatefulWidget {
@@ -15,11 +15,11 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppTheme.nearlyWhite,
+      color: Palette.nearlyWhite,
       child: SafeArea(
         top: false,
         child: Scaffold(
-          backgroundColor: AppTheme.nearlyWhite,
+          backgroundColor: Palette.nearlyWhite,
           body: SingleChildScrollView(
             child: SizedBox(
               height: MediaQuery.of(context).size.height,
@@ -107,7 +107,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
       padding: const EdgeInsets.only(top: 16, left: 32, right: 32),
       child: Container(
         decoration: BoxDecoration(
-          color: AppTheme.white,
+          color: Palette.white,
           borderRadius: BorderRadius.circular(8),
           boxShadow: <BoxShadow>[
             BoxShadow(
@@ -121,7 +121,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
           child: Container(
             padding: const EdgeInsets.all(4.0),
             constraints: const BoxConstraints(minHeight: 80, maxHeight: 160),
-            color: AppTheme.white,
+            color: Palette.white,
             child: SingleChildScrollView(
               padding:
                   const EdgeInsets.only(left: 10, right: 10, top: 0, bottom: 0),
@@ -129,9 +129,9 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                 maxLines: null,
                 onChanged: (String txt) {},
                 style: TextStyle(
-                  fontFamily: AppTheme.fontName,
+                  fontFamily: Palette.fontName,
                   fontSize: 16,
-                  color: AppTheme.dark_grey,
+                  color: Palette.dark_grey,
                 ),
                 cursorColor: Colors.blue,
                 decoration: InputDecoration(

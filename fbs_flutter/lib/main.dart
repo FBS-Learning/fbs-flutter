@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:fbs_flutter/app_theme.dart';
+import 'package:fbs_flutter/palette.dart';
 import 'package:fbs_flutter/fitness_app/fitness_app_home_screen.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
@@ -29,11 +29,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter UI',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        textTheme: AppTheme.textTheme,
-        platform: TargetPlatform.iOS,
-      ),
+      darkTheme: Palette.dark,
+      theme: Palette.light,
+      themeMode: ThemeMode.light,
       home: FitnessAppHomeScreen(),
     );
   }

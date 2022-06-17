@@ -90,7 +90,7 @@ class _ExercisePageState extends State<ExercisePage>
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: FitnessAppTheme.background,
+      color: Theme.of(context).backgroundColor,
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Stack(
@@ -146,14 +146,13 @@ class _ExercisePageState extends State<ExercisePage>
                     0.0, 30 * (1.0 - topBarAnimation!.value), 0.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: FitnessAppTheme.white.withOpacity(topBarOpacity),
+                    color: Palette.white.withOpacity(topBarOpacity),
                     borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(32.0),
                     ),
                     boxShadow: <BoxShadow>[
                       BoxShadow(
-                          color: FitnessAppTheme.grey
-                              .withOpacity(0.4 * topBarOpacity),
+                          color: Palette.grey.withOpacity(0.4 * topBarOpacity),
                           offset: const Offset(1.1, 1.1),
                           blurRadius: 10.0),
                     ],
@@ -179,11 +178,11 @@ class _ExercisePageState extends State<ExercisePage>
                                   'Exercise',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
-                                    fontFamily: FitnessAppTheme.fontName,
+                                    fontFamily: Palette.fontName,
                                     fontWeight: FontWeight.w700,
                                     fontSize: 22 + 6 - 6 * topBarOpacity,
                                     letterSpacing: 1.2,
-                                    color: FitnessAppTheme.darkerText,
+                                    color: Palette.darkerText,
                                   ),
                                 ),
                               ),
@@ -199,7 +198,7 @@ class _ExercisePageState extends State<ExercisePage>
                                 child: Center(
                                   child: Icon(
                                     Icons.keyboard_arrow_left,
-                                    color: FitnessAppTheme.grey,
+                                    color: Palette.grey,
                                   ),
                                 ),
                               ),
@@ -215,7 +214,7 @@ class _ExercisePageState extends State<ExercisePage>
                                     padding: const EdgeInsets.only(right: 8),
                                     child: Icon(
                                       Icons.calendar_today,
-                                      color: FitnessAppTheme.grey,
+                                      color: Palette.grey,
                                       size: 18,
                                     ),
                                   ),
@@ -223,11 +222,11 @@ class _ExercisePageState extends State<ExercisePage>
                                     '15 May',
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
-                                      fontFamily: FitnessAppTheme.fontName,
+                                      fontFamily: Palette.fontName,
                                       fontWeight: FontWeight.normal,
                                       fontSize: 18,
                                       letterSpacing: -0.2,
-                                      color: FitnessAppTheme.darkerText,
+                                      color: Palette.darkerText,
                                     ),
                                   ),
                                 ],
@@ -244,7 +243,7 @@ class _ExercisePageState extends State<ExercisePage>
                                 child: Center(
                                   child: Icon(
                                     Icons.keyboard_arrow_right,
-                                    color: FitnessAppTheme.grey,
+                                    color: Palette.grey,
                                   ),
                                 ),
                               ),

@@ -4,7 +4,7 @@ import 'package:fbs_flutter/fitness_app/models/tabIcon_data.dart';
 import 'package:fbs_flutter/fitness_app/training/training_screen.dart';
 import 'package:flutter/material.dart';
 import 'bottom_navigation_view/bottom_bar_view.dart';
-import 'fitness_app_theme.dart';
+import 'package:fbs_flutter/palette.dart';
 import 'my_diary/my_diary_screen.dart';
 
 class FitnessAppHomeScreen extends StatefulWidget {
@@ -19,7 +19,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
   List<TabIconData> tabIconsList = TabIconData.tabIconsList;
 
   Widget tabBody = Container(
-    color: FitnessAppTheme.background,
+    color: Palette.background,
   );
 
   @override
@@ -44,7 +44,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: FitnessAppTheme.background,
+      color: Palette.background,
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: FutureBuilder<bool>(
@@ -100,8 +100,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
                       TrainingScreen(animationController: animationController);
                 });
               });
-            }
-            else if (index == 2) {
+            } else if (index == 2) {
               animationController?.reverse().then<dynamic>((data) {
                 if (!mounted) {
                   return;

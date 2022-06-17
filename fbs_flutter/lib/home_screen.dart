@@ -1,4 +1,4 @@
-import 'package:fbs_flutter/app_theme.dart';
+import 'package:fbs_flutter/palette.dart';
 import 'package:flutter/material.dart';
 import 'model/homelist.dart';
 
@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.white,
+      backgroundColor: Palette.white,
       body: FutureBuilder<bool>(
         future: getData(),
         builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
@@ -133,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   'Flutter UI',
                   style: TextStyle(
                     fontSize: 22,
-                    color: AppTheme.darkText,
+                    color: Palette.darkText,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -153,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                       BorderRadius.circular(AppBar().preferredSize.height),
                   child: Icon(
                     multiple ? Icons.dashboard : Icons.view_agenda,
-                    color: AppTheme.dark_grey,
+                    color: Palette.dark_grey,
                   ),
                   onTap: () {
                     setState(() {
