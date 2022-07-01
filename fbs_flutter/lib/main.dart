@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:common/common.dart';
-import 'package:fbs_flutter/main/fitness_app_home_screen.dart';
+import 'package:fbs_flutter/main/main_layout.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       darkTheme: Palette.dark,
       theme: Palette.light,
       themeMode: ThemeMode.dark,
-      home: FitnessAppHomeScreen(),
+      home: const MainLayout(),
     );
   }
 }

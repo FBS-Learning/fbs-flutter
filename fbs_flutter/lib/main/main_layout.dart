@@ -1,16 +1,18 @@
 import 'package:fbs_flutter/main/exercise/exercise_page.dart';
 import 'package:fbs_flutter/main/home/home_page.dart';
-import 'package:fbs_flutter/main/training/training_screen.dart';
+import 'package:fbs_flutter/main/training/training_page.dart';
 import 'package:flutter/material.dart';
 import 'package:common/common.dart';
-import 'my_diary/my_diary_screen.dart';
+import 'my_diary/my_diary_page.dart';
 
-class FitnessAppHomeScreen extends StatefulWidget {
+class MainLayout extends StatefulWidget {
+  const MainLayout({Key? key}) : super(key: key);
+
   @override
-  _FitnessAppHomeScreenState createState() => _FitnessAppHomeScreenState();
+  State<MainLayout> createState() => _MainLayoutScreenState();
 }
 
-class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
+class _MainLayoutScreenState extends State<MainLayout>
     with TickerProviderStateMixin {
   AnimationController? animationController;
 
@@ -29,7 +31,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
 
     animationController = AnimationController(
         duration: const Duration(milliseconds: 600), vsync: this);
-    tabBody = MyDiaryScreen(animationController: animationController);
+    tabBody = MyDiaryPage(animationController: animationController);
     super.initState();
   }
 
@@ -95,7 +97,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
                 }
                 setState(() {
                   tabBody =
-                      TrainingScreen(animationController: animationController);
+                      TrainingPage(animationController: animationController);
                 });
               });
             } else if (index == 2) {
@@ -105,7 +107,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
                 }
                 setState(() {
                   tabBody =
-                      MyDiaryScreen(animationController: animationController);
+                      MyDiaryPage(animationController: animationController);
                 });
               });
             } else if (index == 3) {

@@ -1,21 +1,21 @@
-import 'package:fbs_flutter/main/ui_view/body_measurement.dart';
-import 'package:fbs_flutter/main/ui_view/glass_view.dart';
-import 'package:fbs_flutter/main/ui_view/mediterranean_diet_view.dart';
-import 'package:fbs_flutter/main/ui_view/title_view.dart';
 import 'package:common/common.dart';
-import 'package:fbs_flutter/main/my_diary/meals_list_view.dart';
-import 'package:fbs_flutter/main/my_diary/water_view.dart';
+import 'package:fbs_flutter/main/widgets/body_measurement.dart';
+import 'package:fbs_flutter/main/widgets/glass_view.dart';
+import 'package:fbs_flutter/main/widgets/meals_list_view.dart';
+import 'package:fbs_flutter/main/widgets/mediterranean_diet_view.dart';
+import 'package:fbs_flutter/main/widgets/title_view.dart';
+import 'package:fbs_flutter/main/widgets/water_view.dart';
 import 'package:flutter/material.dart';
 
-class MyDiaryScreen extends StatefulWidget {
-  const MyDiaryScreen({Key? key, this.animationController}) : super(key: key);
+class MyDiaryPage extends StatefulWidget {
+  const MyDiaryPage({Key? key, this.animationController}) : super(key: key);
 
   final AnimationController? animationController;
   @override
   _MyDiaryScreenState createState() => _MyDiaryScreenState();
 }
 
-class _MyDiaryScreenState extends State<MyDiaryScreen>
+class _MyDiaryScreenState extends State<MyDiaryPage>
     with TickerProviderStateMixin {
   Animation<double>? topBarAnimation;
 

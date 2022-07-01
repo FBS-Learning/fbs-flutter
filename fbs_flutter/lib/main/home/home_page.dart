@@ -1,9 +1,6 @@
-import 'package:fbs_flutter/main/home/widgets/home_widget.dart';
-import 'package:fbs_flutter/main/ui_view/area_list_view.dart';
-import 'package:fbs_flutter/main/ui_view/running_view.dart';
-import 'package:fbs_flutter/main/ui_view/title_view.dart';
-import 'package:fbs_flutter/main/ui_view/workout_view.dart';
 import 'package:common/common.dart';
+import 'package:fbs_flutter/main/home/widgets/home_widget.dart';
+import 'package:fbs_flutter/main/widgets/title_view.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {

@@ -1,19 +1,19 @@
-import 'package:fbs_flutter/main/ui_view/area_list_view.dart';
-import 'package:fbs_flutter/main/ui_view/running_view.dart';
-import 'package:fbs_flutter/main/ui_view/title_view.dart';
-import 'package:fbs_flutter/main/ui_view/workout_view.dart';
 import 'package:common/common.dart';
+import 'package:fbs_flutter/main/widgets/area_list_view.dart';
+import 'package:fbs_flutter/main/widgets/running_view.dart';
+import 'package:fbs_flutter/main/widgets/title_view.dart';
+import 'package:fbs_flutter/main/widgets/workout_view.dart';
 import 'package:flutter/material.dart';
 
-class TrainingScreen extends StatefulWidget {
-  const TrainingScreen({Key? key, this.animationController}) : super(key: key);
+class TrainingPage extends StatefulWidget {
+  const TrainingPage({Key? key, this.animationController}) : super(key: key);
 
   final AnimationController? animationController;
   @override
   _TrainingScreenState createState() => _TrainingScreenState();
 }
 
-class _TrainingScreenState extends State<TrainingScreen>
+class _TrainingScreenState extends State<TrainingPage>
     with TickerProviderStateMixin {
   Animation<double>? topBarAnimation;
 
