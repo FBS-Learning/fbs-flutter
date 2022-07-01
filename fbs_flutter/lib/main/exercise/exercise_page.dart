@@ -1,4 +1,5 @@
 import 'package:common/common.dart';
+import 'package:fbs_flutter/l10n/generated/l10n.dart';
 import 'package:fbs_flutter/main/exercise/widgets/exercise_widget.dart';
 import 'package:fbs_flutter/main/widgets/title_view.dart';
 import 'package:flutter/material.dart';
@@ -171,7 +172,7 @@ class _ExercisePageState extends State<ExercisePage>
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  'Exercise',
+                                  FBSLocalizations.of(context).Exercise,
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontFamily: Palette.fontName,
