@@ -38,6 +38,8 @@ flutter:
   assets:
     - assets/images/
     - assets/fitness_app/
+    - assets/eva_icons/fill/svg/
+    - assets/eva_icons/outline/svg/
 
   fonts:
     - family: WorkSans

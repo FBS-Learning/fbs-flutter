@@ -10,6 +10,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.0.1
+  bloc: ^8.0.3
+  provider: ^6.0.2
+  get_it: ^7.2.0
+  equatable: ^2.0.3
+  meta: ^1.7.0
+  logger: ^1.1.0
 
 dev_dependencies:
   flutter_test:
