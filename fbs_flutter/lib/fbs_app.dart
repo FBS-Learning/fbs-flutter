@@ -17,7 +17,7 @@ class FBSApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(providers: [
       BlocProvider<ThemeModeBloc>(
-        create: (_) => ThemeModeBloc()..add(const ThemeModeChanged()),
+        create: (_) => ThemeModeBloc()..add(const ThemeModeInit()),
       ),
     ], child: const FBSAppView());
   }

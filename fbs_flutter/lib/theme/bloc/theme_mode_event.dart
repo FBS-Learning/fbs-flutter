@@ -7,6 +7,13 @@ abstract class ThemeModeEvent extends Equatable {
   List<Object> get props => [];
 }
 
+class ThemeModeInit extends ThemeModeEvent {
+  const ThemeModeInit();
+
+  @override
+  List<Object> get props => [];
+}
+
 class ThemeModeChanged extends ThemeModeEvent {
   const ThemeModeChanged();
 

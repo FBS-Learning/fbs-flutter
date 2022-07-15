@@ -13,6 +13,7 @@ class ThemeIcon {
 
 class ThemeModeBloc extends Bloc<ThemeModeEvent, ThemeModeState> {
   ThemeModeBloc() : super(const ThemeModeState()) {
+    on<ThemeModeInit>(_onThemeModeInit);
     on<ThemeModeChanged>(_onThemeMode);
   }
 
@@ -30,5 +31,12 @@ class ThemeModeBloc extends Bloc<ThemeModeEvent, ThemeModeState> {
           iconMode: ThemeIcon().light,
           iconColor: const Color(0xFFFFD700)));
     }
+  }
+  void _onThemeModeInit(ThemeModeEvent event, Emitter<ThemeModeState> emit) {
+    emit(ThemeModeState(
+          themeMode: ThemeMode.light,
+          darkMode: false,
+          iconMode: ThemeIcon().light,
+          iconColor: const Color(0xFFFFD700)));
   }
 }
