@@ -31,7 +31,7 @@ class _MainLayoutScreenState extends State<MainLayout>
 
     animationController = AnimationController(
         duration: const Duration(milliseconds: 600), vsync: this);
-    tabBody = MyDiaryPage(animationController: animationController);
+    tabBody = HomePage(animationController: animationController);
     super.initState();
   }
 
