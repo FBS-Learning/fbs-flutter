@@ -204,8 +204,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                         },
                                         child: Center(
                                           child: SvgPicture.asset(
-                                            'assets/eva_icons/fill/svg/moon.svg',
-                                            color: Palette.lightColor,
+                                            themeState.iconMode,
+                                            color: themeState.iconColor,
                                           ),
                                         ),
                                       ),
