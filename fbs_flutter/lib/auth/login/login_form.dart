@@ -95,7 +95,9 @@ class _LoginButton extends StatelessWidget {
       builder: (context, state) {
         return ElevatedButton(
           key: const Key('loginForm_continue_raisedButton'),
-          onPressed: state.status.isValidated
+          onPressed: (state.status.isInvalid ||
+                  state.status.isPure ||
+                  state.status.isSubmissionInProgress)
               ? () {
                   context.read<LoginBloc>().add(const LoginSubmitted());
                 }
@@ -115,7 +117,9 @@ class _LoginButton extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
-                  color: (state.status.isInvalid || state.status.isPure)
+                  color: (state.status.isInvalid ||
+                          state.status.isPure ||
+                          state.status.isSubmissionInProgress)
                       ? Palette.buttonTextDisable
                       : Colors.white,
                 ),
