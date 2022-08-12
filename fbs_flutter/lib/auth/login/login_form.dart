@@ -98,10 +98,10 @@ class _LoginButton extends StatelessWidget {
           onPressed: (state.status.isInvalid ||
                   state.status.isPure ||
                   state.status.isSubmissionInProgress)
-              ? () {
+              ? null
+              : () {
                   context.read<LoginBloc>().add(const LoginSubmitted());
-                }
-              : null,
+                },
           style: ElevatedButton.styleFrom(
             primary: Palette.colorTheme,
             minimumSize: const Size(200.0, 48.0),
