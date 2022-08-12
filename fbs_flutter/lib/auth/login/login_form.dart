@@ -4,6 +4,7 @@ import 'package:fbs_flutter/l10n/generated/l10n.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:formz/formz.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -89,31 +90,40 @@ class _PasswordInput extends StatelessWidget {
 class _LoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      key: const Key('loginForm_continue_raisedButton'),
-      onPressed: () {
-        print('LOGIN');
-      },
-      style: ElevatedButton.styleFrom(
-        primary: Palette.colorTheme,
-        minimumSize: const Size(200.0, 48.0),
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(5.0)),
-        ),
-      ),
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(4.0),
-          child: Text(
-            FBSLocalizations.of(context).login.toUpperCase(),
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
-              color: Colors.white,
+    return BlocBuilder<LoginBloc, LoginState>(
+      buildWhen: (previous, current) => previous.status != current.status,
+      builder: (context, state) {
+        return ElevatedButton(
+          key: const Key('loginForm_continue_raisedButton'),
+          onPressed: state.status.isValidated
+              ? () {
+                  context.read<LoginBloc>().add(const LoginSubmitted());
+                }
+              : null,
+          style: ElevatedButton.styleFrom(
+            primary: Palette.colorTheme,
+            minimumSize: const Size(200.0, 48.0),
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(5.0)),
             ),
           ),
-        ),
-      ),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: Text(
+                FBSLocalizations.of(context).login.toUpperCase(),
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: (state.status.isInvalid || state.status.isPure)
+                      ? Palette.buttonTextDisable
+                      : Colors.white,
+                ),
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }
