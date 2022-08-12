@@ -1,3 +1,6 @@
+export './forms/password.dart';
+export './forms/username.dart';
+
 export './models/tabIcon_data.dart';
 
 export './utils/palette.dart';

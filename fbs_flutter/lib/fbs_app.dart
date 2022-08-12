@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:common/common.dart';
+import 'package:fbs_flutter/auth/login/login_page.dart';
 import 'package:fbs_flutter/l10n/generated/l10n.dart';
 import 'package:fbs_flutter/main/main_layout.dart';
 import 'package:fbs_flutter/theme/bloc/theme_mode_bloc.dart';
@@ -62,8 +63,8 @@ class _FBSAppState extends State<FBSAppView> {
           GlobalCupertinoLocalizations.delegate,
         ],
         supportedLocales: supportedLocales,
-        locale: const Locale.fromSubtags(languageCode: 'id', countryCode: 'ID'),
-        home: const MainLayout(),
+        locale: const Locale.fromSubtags(languageCode: 'en', countryCode: 'US'),
+        home: const LoginPage(),
       );
     });
   }
