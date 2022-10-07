@@ -1,17 +1,22 @@
 import 'package:bloc/bloc.dart';
 import 'package:common/common.dart';
 import 'package:equatable/equatable.dart';
+import 'package:fbs_flutter/auth/services/auth_services.dart';
 import 'package:formz/formz.dart';
 
 part 'login_event.dart';
 part 'login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  LoginBloc() : super(const LoginState()) {
+  LoginBloc({required AuthService authService})
+      : _authService = authService,
+        super(const LoginState()) {
     on<LoginUsernameChanged>(_onUsernameChanged);
     on<LoginPasswordChanged>(_onPasswordChanged);
     on<LoginSubmitted>(_onSubmitted);
   }
+
+  final AuthService _authService;
 
   void _onUsernameChanged(
     LoginUsernameChanged event,
@@ -46,7 +51,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     if (state.status.isValidated) {
       emit(state.copyWith(status: FormzStatus.submissionInProgress));
       try {
-        print('API Login');
+        await _authService.login(
+            username: state.username.value, password: state.password.value);
         emit(state.copyWith(status: FormzStatus.submissionSuccess));
       } catch (_) {
         emit(state.copyWith(status: FormzStatus.submissionFailure));

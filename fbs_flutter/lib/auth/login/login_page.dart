@@ -1,6 +1,7 @@
 import 'package:common/common.dart';
 import 'package:fbs_flutter/auth/login/bloc/login_bloc.dart';
 import 'package:fbs_flutter/auth/login/login_form.dart';
+import 'package:fbs_flutter/auth/services/auth_services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 
@@ -57,7 +58,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
       body: Center(
         child: BlocProvider(
           create: (context) {
-            return LoginBloc();
+            return LoginBloc(authService: AuthService());
           },
           child: const LoginForm(),
         ),
