@@ -11,7 +11,7 @@ class OAuthResponse {
   @JsonKey(name: 'token_type')
   final String tokenType;
   @JsonKey(name: 'expires_in')
-  final String expiresIn;
+  final int expiresIn;
   @JsonKey(name: 'scope')
   final String scope;
   @JsonKey(name: 'username')
@@ -25,7 +25,7 @@ class OAuthResponse {
   @JsonKey(name: 'name')
   final String name;
   @JsonKey(name: 'image')
-  final String image;
+  final dynamic image;
   @JsonKey(name: 'locale')
   final String locale;
   @JsonKey(name: 'theme')

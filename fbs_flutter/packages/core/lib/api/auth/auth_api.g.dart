@@ -34,7 +34,7 @@ class _AuthAPI implements AuthAPI {
     )
             .compose(
               _dio.options,
-              '/api/security/oauth/token',
+              '/api/security/oauth/force',
               queryParameters: queryParameters,
               data: _data,
             )

@@ -17,9 +17,8 @@ class AuthService {
       'client_id': clientId
     };
     _authAPI = AuthAPI(Dio());
-    print('api login');
     await _authAPI?.login(body).then((value) {
-      print(value.toJson());
+      print(value.toString());
     });
   }
 }
